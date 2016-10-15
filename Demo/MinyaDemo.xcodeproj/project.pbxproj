@@ -34,8 +34,6 @@
 		E1798D651DB237CC00254295 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D401DB237CC00254295 /* EXTSelectorChecking.m */; };
 		E1798D661DB237CC00254295 /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D441DB237CC00254295 /* NSInvocation+EXT.m */; };
 		E1798D671DB237CC00254295 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D461DB237CC00254295 /* NSMethodSignature+EXT.m */; };
-		E1798D681DB237CC00254295 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = E1798D471DB237CC00254295 /* LICENSE.md */; };
-		E1798D691DB237CC00254295 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E1798D481DB237CC00254295 /* README.md */; };
 		E1798D6A1DB237CC00254295 /* MIMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D4C1DB237CC00254295 /* MIMediator.m */; };
 		E1798D6B1DB237CC00254295 /* MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D4F1DB237CC00254295 /* MIPipeline.m */; };
 		E1798D6C1DB237CC00254295 /* MIScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D511DB237CC00254295 /* MIScene.m */; };
@@ -641,11 +639,9 @@
 				E1C3D8121DAF8AE400044718 /* PhotoDetailViewController.m in Sources */,
 				E1C3D8081DAF818300044718 /* PhotoListStore.m in Sources */,
 				E1C3D8151DAF8AF400044718 /* PhotoDetailView.m in Sources */,
-				E1798D691DB237CC00254295 /* README.md in Sources */,
 				E1798D5D1DB237CC00254295 /* NSObject+MIKVO.m in Sources */,
 				E1C3D8051DAF815D00044718 /* PhotoListView.m in Sources */,
 				E119D5A41DB0883800D2C551 /* TopImagePipeline.m in Sources */,
-				E1798D681DB237CC00254295 /* LICENSE.md in Sources */,
 				E119D5AA1DB08A2500D2C551 /* TopImageView.m in Sources */,
 				E119D5831DAFCF9100D2C551 /* SearchPhotoDetailService.m in Sources */,
 				E1798D5E1DB237CC00254295 /* NSObject+MISwizzle.m in Sources */,
@@ -735,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -777,7 +773,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -818,7 +814,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MinyaDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmu.MinyaDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -832,7 +828,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MinyaDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmu.MinyaDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
