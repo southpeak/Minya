@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'MinyaDemo' do
+    pod 'SDWebImage'
+    pod 'FlickrKit'
+    pod 'Masonry'
+end

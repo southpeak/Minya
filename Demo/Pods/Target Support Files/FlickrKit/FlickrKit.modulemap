@@ -1,0 +1,6 @@
+framework module FlickrKit {
+  umbrella header "FlickrKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
