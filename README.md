@@ -1,4 +1,4 @@
-# Minya
+![](https://github.com/southpeak/Blog-images/blob/master/Minya.png?raw=true)
 
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/southpeak/Minya/blob/master/LICENSE)
 
