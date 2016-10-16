@@ -55,7 +55,7 @@
     
     @weakify(self)
     
-    [MIObserve(self.photoListPipeline, inputFetchMoreData) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.photoListPipeline, inputFetchMoreData) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
         

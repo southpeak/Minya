@@ -40,7 +40,7 @@
 - (void)addObservers {
     @weakify(self)
     
-    [MIObserve(self.imagePipeline, photoID) changed:^(NSString * _Nonnull changedValue) {
+    [MIObserve(self.imagePipeline, photoID) changed:^(NSString * _Nonnull newValue) {
         @strongify(self)
         [self fetchData];
     }];

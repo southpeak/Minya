@@ -54,7 +54,7 @@
 - (void)addObservers {
     @weakify(self)
     
-    [MIObserve(self.interestPipeline.photoListPipeline, flagRequestFinished) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.interestPipeline.photoListPipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         if (self.isFirst) {
             [self.interestPipeline setShowImageAtIndex:0];
@@ -62,10 +62,10 @@
         }
     }];
     
-    [MIObserve(self.interestPipeline.photoListPipeline, inputSelectedPhotoIndex) changed:^(NSNumber * _Nonnull changedValue) {
+    [MIObserve(self.interestPipeline.photoListPipeline, inputSelectedPhotoIndex) changed:^(NSNumber * _Nonnull newValue) {
         
         @strongify(self)
-        [self.interestPipeline setShowImageAtIndex:[changedValue integerValue]];
+        [self.interestPipeline setShowImageAtIndex:[newValue integerValue]];
     }];
 }
 

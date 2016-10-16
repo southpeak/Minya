@@ -26,6 +26,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor clearColor];
     
+    // We create a view controller with a scene, and the scene is consisted of
+    // view class's string, view controller class's string and store class's string
     MIScene *scene = [MIScene sceneWithView:@"SearchView" controller:@"SearchViewController" store:@"SearchStore"];
     UIViewController *viewController = [[MIMediator sharedMediator] viewControllerWithScene:scene context:nil];
     UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:viewController];

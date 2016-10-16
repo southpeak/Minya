@@ -40,7 +40,7 @@
     
     @weakify(self)
     
-    [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
         [self.tableView reloadData];

@@ -79,7 +79,7 @@
     self.pipeline = pipeline;
     
     @weakify(self)
-    [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         
         self.titleLabel.text = self.pipeline.photo.title;

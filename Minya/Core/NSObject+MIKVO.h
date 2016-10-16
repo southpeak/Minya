@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Block Type
 
-typedef void(^MIKVOChangedBlock)(id _Nonnull changedValue);
+typedef void(^MIKVOChangedBlock)(id _Nonnull newValue);
 
 #pragma mark - KVO Category for NSObject
 

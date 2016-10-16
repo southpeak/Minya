@@ -101,8 +101,8 @@ static NSString * const kMIKVOInfoKey = @"MIKVOInfoKey";
     
     __MIKVOInfo *info = (__bridge __MIKVOInfo *)(context);
     if (info.changed) {
-        id changedValue = [change valueForKey:NSKeyValueChangeNewKey];
-        info.changed([changedValue isKindOfClass:[NSNull class]] ? nil : changedValue);
+        id newValue = [change valueForKey:NSKeyValueChangeNewKey];
+        info.changed([newValue isKindOfClass:[NSNull class]] ? nil : newValue);
     }
 }
 

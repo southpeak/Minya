@@ -51,7 +51,7 @@
     [self mi_updateView];
     
     @weakify(self)
-    [MIObserve(self.pipeline, url) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.pipeline, url) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         [self mi_updateView];
     }];

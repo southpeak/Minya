@@ -35,13 +35,13 @@ typedef void (^MICallback)(NSDictionary<NSString *, id> * _Nullable);
  *
  *  @param scene      scene infomation
  *  @param context    context for this scene
- *  @param callback   callback block
+ *  @param callback   callback block. Now it is unused, it is just prepared for the next version. 
  *
  *  @return view controller
  */
 - (UIViewController * _Nullable)viewControllerWithScene:(MIScene * _Nonnull)scene
                                                 context:(NSDictionary<NSString *, id> * _Nullable)context
-                                               callback:(MICallback _Nullable)callback;
+                                               callback:(MICallback _Nullable __unused)callback;
 
 - (UIViewController * _Nullable)viewControllerWithScene:(MIScene * _Nonnull)scene
                                                 context:(NSDictionary<NSString *, id> * _Nullable)context;

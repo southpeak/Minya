@@ -72,7 +72,7 @@
     
     @weakify(self)
     
-    [MIObserve(self.detailPipeline, inputPrev) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.detailPipeline, inputPrev) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         
         if (self.prevID && ![self.prevID isEqualToString:@""]) {
@@ -81,7 +81,7 @@
         }
     }];
     
-    [MIObserve(self.detailPipeline, inputNext) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.detailPipeline, inputNext) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         if (self.nextID && ![self.nextID isEqualToString:@""]) {
             self.photoID = self.nextID;

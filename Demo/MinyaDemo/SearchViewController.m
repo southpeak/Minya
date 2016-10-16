@@ -33,7 +33,7 @@
     
     @weakify(self)
     
-    [MIObserve(self.pipeline, inputSearch) changed:^(id _Nonnull changedValue) {
+    [MIObserve(self.pipeline, inputSearch) changed:^(id _Nonnull newValue) {
         
         @strongify(self)
         
@@ -45,7 +45,7 @@
         [self.navigationController pushViewController:viewController animated:YES];
     }];
     
-    [MIObserve(self.pipeline, inputInterest) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.pipeline, inputInterest) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
         

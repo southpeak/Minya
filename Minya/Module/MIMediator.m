@@ -33,7 +33,7 @@
     return [self viewControllerWithScene:scene context:context callback:nil];
 }
 
-- (UIViewController *)viewControllerWithScene:(MIScene *)scene context:(NSDictionary<NSString *,id> *)context callback:(MICallback)callback {
+- (UIViewController *)viewControllerWithScene:(MIScene *)scene context:(NSDictionary<NSString *,id> *)context callback:(MICallback __unused)callback {
     
     NSParameterAssert(scene);
     

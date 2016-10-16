@@ -35,7 +35,7 @@
     
     @weakify(self)
     
-    [MIObserve(self.pipeline, inputSelectedPhotoIndex) changed:^(id  _Nonnull changedValue) {
+    [MIObserve(self.pipeline, inputSelectedPhotoIndex) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
         
