@@ -69,7 +69,7 @@ typedef void (^MIRequestCancel)();
  *  MIService Class
  *
  *  The base class for network service. The base class implements the 
- *  `-requestWithParameters:success:fail`, but it just throws and exception by default,
+ *  `-requestWithParameters:success:fail:`, but it just throws and exception by default,
  *  so you must implement this method in the subclass. And we don't implement the optional
  *  method `-cancelWithOperation:`, so if you need cancel the request, just implement it.
  *
