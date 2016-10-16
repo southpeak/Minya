@@ -62,7 +62,7 @@ UIViewController *viewController = [[MIMediator sharedMediator] viewControllerWi
 UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:viewController];
 ``` 
 
-Of course, there are some questions: how do they communicate with each other? And which they depend on? We will talk later.
+Of course, there are some questions: how do they communicate with each other? And which they are relied on? We will talk later.
 
 Let's come back to Store. Store's job is to precess business logic. A store has three data source: Server, Local Storage and User input. We just talk about the Server and Local Storage.
 
