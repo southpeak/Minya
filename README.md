@@ -1,6 +1,6 @@
 ![](https://github.com/southpeak/Blog-images/blob/master/Minya.png?raw=true)
 
-[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/southpeak/Minya/blob/master/LICENSE)
+![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS-333333.svg) [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/southpeak/Minya/blob/master/LICENSE) 
 
 A simple basic hierarchy for iOS development with Objective-C. It is based on MVCS and KVO.
 
