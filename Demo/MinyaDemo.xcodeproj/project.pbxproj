@@ -43,6 +43,7 @@
 		E1798D701DB237CC00254295 /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D591DB237CC00254295 /* MIViewController.m */; };
 		E1798D711DB237CC00254295 /* UIView+MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D5B1DB237CC00254295 /* UIView+MIPipeline.m */; };
 		E1798D791DB2391B00254295 /* MinyaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D781DB2391B00254295 /* MinyaDemoTests.m */; };
+		E1798D811DB36BA100254295 /* MIMediatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E1798D801DB36BA100254295 /* MIMediatorTest.m */; };
 		E1C3D7F41DAF73FB00044718 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D7F31DAF73FB00044718 /* SearchViewController.m */; };
 		E1C3D7F71DAF741B00044718 /* SearchStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D7F61DAF741B00044718 /* SearchStore.m */; };
 		E1C3D7FA1DAF742E00044718 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D7F91DAF742E00044718 /* SearchView.m */; };
@@ -152,6 +153,7 @@
 		E1798D761DB2391B00254295 /* MinyaDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinyaDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1798D781DB2391B00254295 /* MinyaDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinyaDemoTests.m; sourceTree = "<group>"; };
 		E1798D7A1DB2391B00254295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1798D801DB36BA100254295 /* MIMediatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMediatorTest.m; sourceTree = "<group>"; };
 		E1C3D7F21DAF73FB00044718 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E1C3D7F31DAF73FB00044718 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		E1C3D7F51DAF741B00044718 /* SearchStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchStore.h; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 			children = (
 				E1798D781DB2391B00254295 /* MinyaDemoTests.m */,
 				E1798D7A1DB2391B00254295 /* Info.plist */,
+				E1798D801DB36BA100254295 /* MIMediatorTest.m */,
 			);
 			path = MinyaDemoTests;
 			sourceTree = "<group>";
@@ -664,6 +667,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1798D811DB36BA100254295 /* MIMediatorTest.m in Sources */,
 				E1798D791DB2391B00254295 /* MinyaDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

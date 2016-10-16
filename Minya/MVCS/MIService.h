@@ -73,7 +73,7 @@ typedef void (^MIRequestCancel)();
  *  so you must implement this method in the subclass. And we don't implement the optional
  *  method `-cancelWithOperation:`, so if you need cancel the request, just implement it.
  *
- *  There is another thing. We ifentify an request with and string(`_identifier`) but not a object,
+ *  There is another thing. We identify an request with and string(`_identifier`) but not a object,
  *  because we manager all the requests in a net request center. If your implementation is diffirent,
  *  you can ignore or delete the `_identifier` variable in you implementation.
  *

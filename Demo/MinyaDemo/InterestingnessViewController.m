@@ -10,11 +10,15 @@
 #import "InterestingnessPipeline.h"
 #import "Minya.h"
 
+#pragma mark - InterestingnessViewController Extension
+
 @interface InterestingnessViewController ()
 
 @property (nonatomic, strong) InterestingnessPipeline *pipeline;
 
 @end
+
+#pragma mark - InterestingnessViewController implementation
 
 @implementation InterestingnessViewController
 

@@ -172,6 +172,8 @@
 
 - (void)mi_tapButton:(UIButton *)sender {
     
+    // Tap the button, and update the input data of pipeline.
+    // Then the store that observes thess properties will do some work.
     if (sender == self.prevButton) {
         self.pipeline.inputPrev = YES;
     } else {

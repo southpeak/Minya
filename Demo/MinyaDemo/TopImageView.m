@@ -9,8 +9,11 @@
 #import "TopImageView.h"
 #import "TopImagePipeline.h"
 #import "Minya.h"
+
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+
+#pragma mark - TopImageView Extension
 
 @interface TopImageView ()
 
@@ -21,7 +24,11 @@
 
 @end
 
+#pragma mark - TopImageView implementation
+
 @implementation TopImageView
+
+#pragma mark - Inherited Methods
 
 - (instancetype)init {
     self = [super init];
@@ -51,6 +58,8 @@
     [self mi_updateView];
     
     @weakify(self)
+    
+    // Observe url property of the pipeline
     [MIObserve(self.pipeline, url) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         [self mi_updateView];
@@ -61,12 +70,14 @@
     return CGSizeMake([UIScreen mainScreen].bounds.size.width, 200.0f);
 }
 
+#pragma mark - Private Methods
+
 - (void)mi_updateView {
     self.titleLabel.text = self.pipeline.title;
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.pipeline.url]];
 }
 
-#pragma mark -
+#pragma mark - Proprities Accessor
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {

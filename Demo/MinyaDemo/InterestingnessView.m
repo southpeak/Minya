@@ -14,6 +14,8 @@
 
 #import <Masonry/Masonry.h>
 
+#pragma mark - InterestingnessView extension
+
 @interface InterestingnessView ()
 
 @property (nonatomic, strong) InterestingnessPipeline *pipeline;
@@ -22,6 +24,8 @@
 @property (nonatomic, strong) PhotoListView *photoListView;
 
 @end
+
+#pragma mark - InterestingnessView implementation
 
 @implementation InterestingnessView
 
@@ -47,11 +51,12 @@
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
     self.pipeline = pipeline;
     
+    // Set up the pipeline of the subviews.
     [self.topImageView setupPipeline:self.pipeline.imagePipeline];
     [self.photoListView setupPipeline:self.pipeline.photoListPipeline];
 }
 
-#pragma mark - 
+#pragma mark - Properties Accessor
 
 - (TopImageView *)topImageView {
     if (!_topImageView) {

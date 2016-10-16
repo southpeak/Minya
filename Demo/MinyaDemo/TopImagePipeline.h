@@ -10,9 +10,9 @@
 
 @interface TopImagePipeline : MIPipeline
 
+// Normal data
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *url;
-
 @property (nonatomic, copy) NSString *photoID;
 
 @end
