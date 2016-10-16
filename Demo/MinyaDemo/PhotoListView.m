@@ -13,6 +13,7 @@
 #import <Masonry/Masonry.h>
 
 #pragma mark - PhotoListView Extension
+
 @interface PhotoListView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) PhotoListPipeline *pipeline;
@@ -22,9 +23,11 @@
 @end
 
 #pragma mark - PhotoListView implementation
+
 @implementation PhotoListView
 
 #pragma mark - Inherited Methods
+
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

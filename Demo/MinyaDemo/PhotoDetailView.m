@@ -7,11 +7,16 @@
 //
 
 #import "PhotoDetailView.h"
-#import <Masonry/Masonry.h>
 #import "PhotoDetailPipeline.h"
 #import "Minya.h"
 
+#import <Masonry/Masonry.h>
+
+#pragma mark - PhotoDetailView Extension
+
 @interface PhotoDetailView ()
+
+@property (nonatomic, strong) PhotoDetailPipeline *pipeline;
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *ownerLabel;
@@ -21,11 +26,13 @@
 @property (nonatomic, strong) UIButton *prevButton;
 @property (nonatomic, strong) UIButton *nextButton;
 
-@property (nonatomic, strong) PhotoDetailPipeline *pipeline;
-
 @end
 
+#pragma mark - PhotoDetailView
+
 @implementation PhotoDetailView
+
+#pragma mark - Inherited Methods
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -79,6 +86,8 @@
     self.pipeline = pipeline;
     
     @weakify(self)
+    
+    // Observe the data request finished event and update the view.
     [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         
@@ -89,20 +98,18 @@
     }];
 }
 
-#pragma mark - Accessor
+#pragma mark - Properties Accessor
 
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
-        _titleLabel = [self mi_createLabel];
-        _titleLabel.textColor = [UIColor blueColor];
+        _titleLabel = [self mi_createLabelWithTextColor:[UIColor blueColor]];
     }
     return _titleLabel;
 }
 
 - (UILabel *)ownerLabel {
     if (!_ownerLabel) {
-        _ownerLabel = [self mi_createLabel];
-        _ownerLabel.textColor = [UIColor greenColor];
+        _ownerLabel = [self mi_createLabelWithTextColor:[UIColor greenColor]];
     }
     return _ownerLabel;
 }
@@ -110,19 +117,15 @@
 - (UILabel *)takenLabel {
     
     if (!_takenLabel) {
-        _takenLabel = [self mi_createLabel];
-        _takenLabel.textColor = [UIColor redColor];
+        _takenLabel = [self mi_createLabelWithTextColor:[UIColor redColor]];
     }
-    
     return _takenLabel;
 }
 
 - (UILabel *)descLabel {
     if (!_descLabel) {
-        _descLabel = [self mi_createLabel];
-        _descLabel.textColor = [UIColor yellowColor];
+        _descLabel = [self mi_createLabelWithTextColor:[UIColor yellowColor]];
     }
-    
     return _descLabel;
 }
 
@@ -140,16 +143,20 @@
     return _nextButton;
 }
 
-- (UILabel *)mi_createLabel {
+#pragma mark - Private Methods
+
+- (UILabel *)mi_createLabelWithTextColor:(UIColor *)color {
     UILabel *label = [[UILabel alloc] init];
     label.font = [UIFont systemFontOfSize:14.0f];
     label.numberOfLines = 0;
     label.lineBreakMode = NSLineBreakByWordWrapping;
+    label.textColor = color;
     
     return label;
 }
 
 - (UIButton *)mi_createButtonWithTitle:(NSString *)title {
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [button setTitle:title forState:UIControlStateNormal];

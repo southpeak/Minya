@@ -33,6 +33,7 @@
     
     @weakify(self)
     
+    // Observe the input action and then do some work
     [MIObserve(self.pipeline, inputSearch) changed:^(id _Nonnull newValue) {
         
         @strongify(self)

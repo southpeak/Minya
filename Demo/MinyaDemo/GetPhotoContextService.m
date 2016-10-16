@@ -15,8 +15,6 @@
     
     [[FlickrKit sharedFlickrKit] call:@"flickr.photos.getContext" args:parameters completion:^(NSDictionary *response, NSError *error) {
         
-        NSLog(@"%@", response);
-        
         NSDictionary *prevPhoto = response[@"prevphoto"];
         NSDictionary *nextPhoto = response[@"nextphoto"];
         

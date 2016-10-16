@@ -26,9 +26,11 @@
 @end
 
 #pragma mark - PhotoListStore implementation
+
 @implementation PhotoListStore
 
 #pragma mark - Inherited Methods
+
 - (instancetype)initWithContext:(NSDictionary<NSString *,id> *)context {
     
     self = [super initWithContext:context];

@@ -11,6 +11,7 @@
 #import "Minya.h"
 
 #pragma mark - PhotoListViewController Extension
+
 @interface PhotoListViewController ()
 
 @property (nonatomic, strong) PhotoListPipeline *pipeline;      //!< Pipeline
@@ -18,6 +19,7 @@
 @end
 
 #pragma mark - PhotoListViewController implementation
+
 @implementation PhotoListViewController
 
 #pragma mark - Inherited Methods

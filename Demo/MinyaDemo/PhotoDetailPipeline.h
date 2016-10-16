@@ -11,10 +11,13 @@
 
 @interface PhotoDetailPipeline : MIPipeline
 
+// Normal data
 @property (nonatomic, strong) Photo *photo;
 
+// Flag data
 @property (nonatomic, assign) BOOL flagRequestFinished;
 
+// Input data
 @property (nonatomic, assign) BOOL inputPrev;
 @property (nonatomic, assign) BOOL inputNext;
 

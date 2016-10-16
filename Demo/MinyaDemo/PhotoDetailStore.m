@@ -10,20 +10,26 @@
 #import "PhotoDetailPipeline.h"
 #import "Minya.h"
 
+#pragma mark - PhotoDetailStore Extension
+
 @interface PhotoDetailStore ()
 
-@property (nonatomic, strong) PhotoDetailPipeline *detailPipeline;
+@property (nonatomic, strong) PhotoDetailPipeline *detailPipeline;      // Pipeline
+
+@property (nonatomic, strong) id<MIService> searchDetailService;        // Service for get photo's detail
+@property (nonatomic, strong) id<MIService> getPhotoContextService;     // Service for get photo's context
+
 @property (nonatomic, copy) NSString *photoID;
-
-@property (nonatomic, strong) id<MIService> searchDetailService;
-@property (nonatomic, strong) id<MIService> getPhotoContextService;
-
-@property (nonatomic, strong) NSString *prevID;
-@property (nonatomic, strong) NSString *nextID;
+@property (nonatomic, copy) NSString *prevID;
+@property (nonatomic, copy) NSString *nextID;
 
 @end
 
+#pragma mark - PhotoDetailStore implementation
+
 @implementation PhotoDetailStore
+
+#pragma mark - Inherited Methods
 
 - (instancetype)initWithContext:(NSDictionary<NSString *,id> *)context {
     
@@ -49,18 +55,17 @@
         self.detailPipeline.flagRequestFinished = YES;
         
     } fail:^(id  _Nullable data, NSError * _Nullable error) {
-        
+        // You can do something if the data request fail.
     }];
     
     [self.getPhotoContextService requestWithParameters:@{@"photo_id": self.photoID ?: @""} success:^(NSDictionary * _Nullable data) {
         
         @strongify(self)
-        
         self.prevID = data[@"prevID"];
         self.nextID = data[@"nextID"];
         
     } fail:^(id  _Nullable data, NSError * _Nullable error) {
-        
+        // You can do something if the data request fail.
     }];
 }
 
@@ -72,6 +77,7 @@
     
     @weakify(self)
     
+    // Observe the input of the user, such as tapping the prev or next button
     [MIObserve(self.detailPipeline, inputPrev) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         
@@ -95,7 +101,7 @@
     return @[@"photoID"];
 }
 
-#pragma mark -
+#pragma mark - Properities Accessor
 
 - (PhotoDetailPipeline *)detailPipeline {
     if (!_detailPipeline) {
