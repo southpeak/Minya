@@ -19,6 +19,7 @@
 @property (nonatomic, strong) id<MIService> searchDetailService;        // Service for get photo's detail
 @property (nonatomic, strong) id<MIService> getPhotoContextService;     // Service for get photo's context
 
+// The data that not need in the pipeline.
 @property (nonatomic, copy) NSString *photoID;
 @property (nonatomic, copy) NSString *prevID;
 @property (nonatomic, copy) NSString *nextID;

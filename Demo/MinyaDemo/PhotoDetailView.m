@@ -35,7 +35,9 @@
 #pragma mark - Inherited Methods
 
 - (instancetype)initWithFrame:(CGRect)frame {
+    
     self = [super initWithFrame:frame];
+    
     if (self) {
         
         [self addSubview:self.titleLabel];

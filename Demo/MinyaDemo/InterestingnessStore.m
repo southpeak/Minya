@@ -23,6 +23,9 @@
 // you business logic code to different sub store. One store handles
 // one business logic. And the communication between is the
 // responsibility of the pipeline.
+//
+// Another thing. We reuse the PhotoListStore and PhotoListView, but not
+// reuse the PhotoListViewController.
 @property (nonatomic, strong) TopImageStore *imageStore;                    // Top image store
 @property (nonatomic, strong) PhotoListStore *photoStore;                   // Photo List store
 

@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param TARGET  observed object
  *  @param KEYPATH property's keypath
+ *
  */
 #define MIObserve(TARGET, KEYPATH) \
 [self observe:(id)(TARGET) forKeyPath:@keypath(TARGET, KEYPATH)]

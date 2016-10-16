@@ -61,7 +61,7 @@
     if (!_imagePipeline) {
         _imagePipeline = [[TopImagePipeline alloc] init];
         
-        // Add observers here is to make sure that the pipeline is not nil.
+        // Adding observers here is to make sure that the pipeline is not nil.
         [self addObservers];
     }
     return _imagePipeline;

@@ -59,7 +59,7 @@
     
     @weakify(self)
     
-    // Observe url property of the pipeline
+    // Observe `url` property of the pipeline
     [MIObserve(self.pipeline, url) changed:^(id  _Nonnull newValue) {
         @strongify(self)
         [self mi_updateView];

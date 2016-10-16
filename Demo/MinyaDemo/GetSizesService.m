@@ -23,6 +23,7 @@
             
             __block NSString *url = nil;
             [sizes enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
                 if ([@[@100, @150, @200] containsObject:@([obj[@"height"] integerValue])]) {
                     url = obj[@"source"];
                     *stop = YES;

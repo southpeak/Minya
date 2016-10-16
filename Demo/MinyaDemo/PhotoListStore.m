@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) id<MIService> searchPhotosService;                    //!< Service
 
+// Data that is not needed in the pipeline.
 @property (nonatomic, copy) NSString *photoName;
 @property (nonatomic, assign) NSUInteger pageNumber;
 @property (nonatomic, assign) NSUInteger totalPage;
