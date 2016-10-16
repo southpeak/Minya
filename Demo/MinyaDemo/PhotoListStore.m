@@ -9,11 +9,13 @@
 #import "PhotoListStore.h"
 #import "Minya.h"
 
+#pragma mark - PhotoListStore Extension
+
 @interface PhotoListStore ()
 
-@property (nonatomic, strong, readwrite) PhotoListPipeline *photoListPipeline;
+@property (nonatomic, strong, readwrite) PhotoListPipeline *photoListPipeline;      //!< Pipeline
 
-@property (nonatomic, strong) id<MIService> searchPhotosService;
+@property (nonatomic, strong) id<MIService> searchPhotosService;                    //!< Service
 
 @property (nonatomic, copy) NSString *photoName;
 @property (nonatomic, assign) NSUInteger pageNumber;
@@ -23,8 +25,10 @@
 
 @end
 
+#pragma mark - PhotoListStore implementation
 @implementation PhotoListStore
 
+#pragma mark - Inherited Methods
 - (instancetype)initWithContext:(NSDictionary<NSString *,id> *)context {
     
     self = [super initWithContext:context];
@@ -55,6 +59,7 @@
     
     @weakify(self)
     
+    // Observe the input property, and then do some work if the data is changed.
     [MIObserve(self.photoListPipeline, inputFetchMoreData) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
@@ -76,8 +81,8 @@
 
 - (void)mi_requestPhotos {
     
+    // Set up the parameters which will be passed to the service layer.
     NSDictionary *parameters = @{
-//        @"text": self.photoName,
         @"page": [NSString stringWithFormat:@"%ld", self.pageNumber],
         @"per_page": [NSString stringWithFormat:@"%ld", self.pageSize]
     };
@@ -90,7 +95,12 @@
         @strongify(self)
         
         if (data[@"photos"]) {
+            
+            // Store the photo data
             [self.photoListPipeline.photos addObjectsFromArray:data[@"photos"]];
+            
+            // Update the flag property, and then the object(here is the PhotoListView object)
+            // who observes it can do some work.
             self.photoListPipeline.flagRequestFinished = YES;
         }
         
@@ -103,7 +113,7 @@
     }];
 }
 
-#pragma mark - 
+#pragma mark - Properties Accessor
 
 - (PhotoListPipeline *)photoListPipeline {
     if (!_photoListPipeline) {

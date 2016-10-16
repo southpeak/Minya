@@ -10,13 +10,17 @@
 #import "PhotoListPipeline.h"
 #import "Minya.h"
 
+#pragma mark - PhotoListViewController Extension
 @interface PhotoListViewController ()
 
-@property (nonatomic, strong) PhotoListPipeline *pipeline;
+@property (nonatomic, strong) PhotoListPipeline *pipeline;      //!< Pipeline
 
 @end
 
+#pragma mark - PhotoListViewController implementation
 @implementation PhotoListViewController
+
+#pragma mark - Inherited Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +28,7 @@
     self.title = @"Photo List";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    // You should call `fetchData` method at the place where you want
     [self.store fetchData];
 }
 
@@ -35,7 +40,9 @@
     
     @weakify(self)
     
-    [MIObserve(self.pipeline, inputSelectedPhotoIndex) changed:^(id  _Nonnull newValue) {
+    // When user select a cell in the tableview, it will push the next viewcontroller.
+    // The view controller observe the action and then do the work.
+    [MIObserve(self.pipeline, inputSelectedPhotoIndex) changed:^(id _Nonnull newValue) {
         
         @strongify(self)
         
@@ -52,9 +59,5 @@
 - (void)dealloc {
     NSLog(@"%s", __FUNCTION__);
 }
-
-#pragma mark - 
-
-
 
 @end

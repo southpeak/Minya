@@ -19,7 +19,7 @@
 }
 
 - (NSDictionary *)contextForDetail {
-    
+
     NSDictionary *photo = self.photos[self.inputSelectedPhotoIndex];
     NSDictionary *params = @{
         @"photoID": photo[@"id"],

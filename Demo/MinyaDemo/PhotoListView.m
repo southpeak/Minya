@@ -12,6 +12,7 @@
 #import "Minya.h"
 #import <Masonry/Masonry.h>
 
+#pragma mark - PhotoListView Extension
 @interface PhotoListView () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) PhotoListPipeline *pipeline;
@@ -20,8 +21,10 @@
 
 @end
 
+#pragma mark - PhotoListView implementation
 @implementation PhotoListView
 
+#pragma mark - Inherited Methods
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -36,10 +39,15 @@
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
+    
     self.pipeline = pipeline;
+    
+    // After setting up the pipeline, we should observe some properties we need.
     
     @weakify(self)
     
+    // Observe the flag property, and if data has been back from the server,
+    // we can refresh the tableview.
     [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
         
         @strongify(self)
@@ -70,7 +78,7 @@
     return cell;
 }
 
-#pragma mark -
+#pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
@@ -79,7 +87,7 @@
     }
 }
 
-#pragma mark - 
+#pragma mark - Properties Accessor
 
 - (UITableView *)tableView {
     if (!_tableView) {

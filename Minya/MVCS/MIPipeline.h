@@ -19,7 +19,7 @@
  *
  *  We suggest that you can put five type data in the pipeline:
  *
- *  1. `Common data`: these data is from the server and then showed in the view.
+ *  1. `Normal data`: these data is from the server and then showed in the view.
  *  2. `Flag data`: now the KVO is not good for collection data, so we can set a flag for
  *     these data which from server. The view layer can observe the flag peoperty to
  *     know the collection data is updated.

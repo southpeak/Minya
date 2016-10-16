@@ -56,6 +56,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  However, the default `-pipeline` throw and exception, so you must implement
  *  this method in the subclass. An the `-fetchData` method is just empty.
  *
+ *  The other work of store layer is to create the pipeline object for the scene.
+ *  The view controller will fetch the pipeline object and pass it to the view layer.
+ *
  */
 @interface MIStore : NSObject <MIStore>
 

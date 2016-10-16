@@ -11,6 +11,7 @@
 
 @interface SearchStore ()
 
+// Declare a pipeline object
 @property (nonatomic, strong, nullable) SearchPipeline *searchPipeline;
 
 @end
