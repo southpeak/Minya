@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[FlickrKit sharedFlickrKit] initializeWithAPIKey:@"Your Flickr API Key" sharedSecret:@"secret for Your Flickr API"];
+    [[FlickrKit sharedFlickrKit] initializeWithAPIKey:@"Your Flickr API Key" sharedSecret:@"Secret for Your Flickr API"];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor clearColor];
