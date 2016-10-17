@@ -226,6 +226,10 @@ Then it will create all the 8 files for you.
 
 And some Xcode 8 extensions may be in plan.
 
+## Collaborators
+
+[Hyman00](https://github.com/Hyman00)
+
 ## Licenses
 
 All source code is licensed under the [MIT License](https://github.com/southpeak/Minya/blob/master/LICENSE).
