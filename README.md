@@ -66,7 +66,7 @@ UINavigationController *navigation = [[UINavigationController alloc] initWithRoo
 
 Of course, there are some questions: how do they communicate with each other? And which they are relied on? We will talk this later.
 
-Let's come back to `Store`. Store's job is to precess business logic. A store has three data source: `Server`, `Local Storage` and `User inputs`. We just talk about the `Server` and `Local Storage`.
+Let's come back to `Store`. Store's job is to process business logic. A store has three data source: `Server`, `Local Storage` and `User inputs`. We just talk about the `Server` and `Local Storage`.
 
 We declare two protocols: `MIService` and `MIStorage`, which declare some methods that classes conforming to them should implement. Take the `MIService` for example, if you have a RESTful API to request a list data from the server, you can define a subclass of `MIService` class which has conformed to `MIService` protocol and implement the `-requestWithParameters:success:fail:` method. In the subclass, you can create request object and start a request, and handle the response, then pass the data to the store object by the two blocks as you need. And a store just know about the protocol object, and not know the concrete service class. We create a service instance with the service class's name, just like the following code:
 
