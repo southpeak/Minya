@@ -203,6 +203,7 @@ One coin has two side. The Minya also has some problems:
 * Pipeline class may contain a lot of properties if you don't build up the Pipeline Tree correctly.
 * If you are not familiar with KVO, you may be confuse, especially when you debug the code. In this situation, you just know who changes the data and who cares the changed data.
 * The scene'e three element is decoupled, however they are relied on the pipeline object. When you want to reuse or change one element object, you must make sure the pipeline is correct.
+* It is not friendly to the cell of table view and collection view.
 
 So, if you want to use Minya, you should know these problems. And there will be more problems in practice.
 
