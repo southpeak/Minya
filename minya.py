@@ -198,20 +198,10 @@ def create_mvcs(name):
 
 	fo = open(store_name + '.m', "wb")
 	writed_str = get_file_header(store_name, 'm')
-	writed_str = writed_str + store_implementation % (store_name, 
-													  pipeline_name, 
-													  common_head_file,
-													  store_name, 
-													  pipeline_name, 
-													  lowwer_pipeline_name,
-													  store_name,
-													  lowwer_pipeline_name,
-													  pipeline_name, 
-													  lowwer_pipeline_name,
-													  lowwer_pipeline_name,
-													  lowwer_pipeline_name,
-													  pipeline_name,
-													  lowwer_pipeline_name)
+	writed_str = writed_str + store_implementation % (store_name, pipeline_name, common_head_file,
+        store_name, pipeline_name, lowwer_pipeline_name, store_name, lowwer_pipeline_name,
+		pipeline_name, lowwer_pipeline_name, lowwer_pipeline_name, lowwer_pipeline_name,
+        pipeline_name, lowwer_pipeline_name)
 	fo.write(writed_str)
 	fo.close()
 
@@ -225,11 +215,8 @@ def create_mvcs(name):
 
 	fo = open(view_name + '.m', "wb")
 	writed_str = get_file_header(view_name, 'm')
-	writed_str = writed_str + view_implementation % (view_name,
-													 pipeline_name,
-													 view_name,
-													 pipeline_name,
-													 view_name)
+	writed_str = writed_str + view_implementation % (view_name, pipeline_name, view_name,
+        pipeline_name, view_name)
 	fo.write(writed_str)
 	fo.close()
 
@@ -243,12 +230,8 @@ def create_mvcs(name):
 
 	fo = open(view_controller_name + ".m", "wb")
 	writed_str = get_file_header(view_controller_name, 'm')
-	writed_str = writed_str + view_controller_implementation % (view_controller_name,
-																pipeline_name,
-																common_head_file,
-																view_controller_name,
-																pipeline_name,
-																view_controller_name)
+	writed_str = writed_str + view_controller_implementation % (view_controller_name, pipeline_name,
+		common_head_file, view_controller_name, pipeline_name, view_controller_name)
 	fo.write(writed_str)
 	fo.close()
 
