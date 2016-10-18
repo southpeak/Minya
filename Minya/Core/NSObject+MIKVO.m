@@ -97,7 +97,7 @@ static NSString * const kMIKVOInfoKey = @"MIKVOInfoKey";
 
 #pragma mark - KVO
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
     __MIKVOInfo *info = (__bridge __MIKVOInfo *)(context);
     if (info.changed) {
