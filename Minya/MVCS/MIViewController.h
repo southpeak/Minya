@@ -18,11 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  There are three basic elements in a view controller:
  *  1. Store: used to handle all the business logic
- *  2. Container view: the container view of all the subviews
+ *  2. Container view: the container view of all the subviews, now it is just the ControllerView's view,
+ *     but we set it with the instance of the viewClass in the `-loadView` method
  *  3. Pipeline: used to handle the data flow
  *
  *  This basic class just do the job related to the MVCS:
- *  1. Create container view and add it to the view controller's view;
+ *  1. Set the ViewController's view with a instance of viewClass;
  *  2. Set its own pipeline and the container view's pipeline. This step is the key step
  *     that binds the pipeline hierarchy to the view hierarchy;
  *  3. Call the addObservers method to add observers of the pipeline data.
@@ -36,7 +37,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MIViewController : UIViewController
 
 @property (nonatomic, strong, readonly, nonnull) id<MIStore> store;          //!< Store for the business logic
-@property (nonatomic, strong, readonly, nonnull) UIView *containerView;      //!< The container view of the view hierarchy
 
 /**
  *  Initiallize method

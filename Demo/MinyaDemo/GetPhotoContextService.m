@@ -32,3 +32,27 @@
 }
 
 @end
+
+// Example
+
+//{
+//    count =     {
+//        "_content" = 7495;
+//    };
+//    nextphoto =     {
+//        id = 0;
+//    };
+//    prevphoto =     {
+//        farm = 6;
+//        id = 30424951795;
+//        license = 0;
+//        media = photo;
+//        owner = "8946624@N08";
+//        secret = fedf4dcd4c;
+//        server = 5750;
+//        thumb = "https://farm6.staticflickr.com/5750/30424951795_fedf4dcd4c_s.jpg";
+//        title = "20161017_170050";
+//        url = "/photos/8946624@N08/30424951795/in/photostream/";
+//    };
+//    stat = ok;
+//}

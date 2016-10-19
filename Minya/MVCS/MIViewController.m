@@ -15,7 +15,6 @@
 @interface MIViewController ()
 
 @property (nonatomic, assign) Class viewClass;                  //!< Container view class
-@property (nonatomic, strong, readwrite) UIView *containerView;
 
 @end
 
@@ -41,16 +40,18 @@
     return self;
 }
 
+- (void)loadView {
+    [super loadView];
+    
+    self.view = [[self.viewClass alloc] init];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Build the view hierarchy
-    self.containerView = [[self.viewClass alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.containerView];
-    
     // Set up pipeline
     [self setupPipeline:self.store.pipeline];
-    [self.containerView setupPipeline:self.store.pipeline];
+    [self.view setupPipeline:self.store.pipeline];
     
     // Add observers of the pipeline data.
     [self addObservers];
