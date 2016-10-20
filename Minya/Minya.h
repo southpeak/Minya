@@ -21,7 +21,6 @@
 #import "MIScene.h"
 #import "MIMediator.h"
 
-#import "UIView+MIPipeline.h"
 #import "NSObject+MIDealloc.h"
 #import "NSObject+MIKVO.h"
 
