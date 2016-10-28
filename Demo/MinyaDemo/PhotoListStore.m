@@ -86,8 +86,8 @@
     
     // Set up the parameters which will be passed to the service layer.
     NSDictionary *parameters = @{
-        @"page": [NSString stringWithFormat:@"%ld", self.pageNumber],
-        @"per_page": [NSString stringWithFormat:@"%ld", self.pageSize]
+        @"page": [NSString stringWithFormat:@"%ld", (unsigned long)self.pageNumber],
+        @"per_page": [NSString stringWithFormat:@"%ld", (unsigned long)self.pageSize]
     };
     
     self.isLoading = YES;

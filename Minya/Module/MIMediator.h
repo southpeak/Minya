@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "MIUtilities.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class MIScene;
-
-typedef void (^MICallback)(NSDictionary<NSString *, id> * _Nullable);
 
 /**
  *  MIMediator class
@@ -41,7 +41,7 @@ typedef void (^MICallback)(NSDictionary<NSString *, id> * _Nullable);
  */
 - (UIViewController * _Nullable)viewControllerWithScene:(MIScene * _Nonnull)scene
                                                 context:(NSDictionary<NSString *, id> * _Nullable)context
-                                               callback:(MICallback _Nullable __unused)callback;
+                                               callback:(MICallback _Nullable)callback;
 
 - (UIViewController * _Nullable)viewControllerWithScene:(MIScene * _Nonnull)scene
                                                 context:(NSDictionary<NSString *, id> * _Nullable)context;

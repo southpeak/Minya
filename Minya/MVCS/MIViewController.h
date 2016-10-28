@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MIUtilities.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol MIStore;
@@ -43,9 +45,12 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param store     store
  *  @param viewClass class of the container view
+ *  @param callback  callback for the preview scene. Use this block to return data to 
+ *                   previous scene.
  *
  *  @return MIViewController instance
  */
+- (instancetype _Nullable)initWithStore:(id<MIStore> _Nonnull)store viewClass:(Class _Nonnull)viewClass callback:(MICallback _Nullable)callback;
 - (instancetype _Nullable)initWithStore:(id<MIStore> _Nonnull)store viewClass:(Class _Nonnull)viewClass;
 
 /**

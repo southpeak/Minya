@@ -57,6 +57,7 @@
 		E1C3D8151DAF8AF400044718 /* PhotoDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D8141DAF8AF400044718 /* PhotoDetailView.m */; };
 		E1C3D8181DAF8B0500044718 /* PhotoDetailStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D8171DAF8B0500044718 /* PhotoDetailStore.m */; };
 		E1C3D81B1DAF8B3A00044718 /* PhotoDetailPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D81A1DAF8B3A00044718 /* PhotoDetailPipeline.m */; };
+		E1D07B441DC21D4B00B8E840 /* MIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D07B431DC21D4B00B8E840 /* MIUtilities.m */; };
 		E702B688D1DFD71E0680DE53 /* Pods_MinyaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE42304832BEE7C82AC7AF08 /* Pods_MinyaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -180,6 +181,8 @@
 		E1C3D8171DAF8B0500044718 /* PhotoDetailStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailStore.m; sourceTree = "<group>"; };
 		E1C3D8191DAF8B3A00044718 /* PhotoDetailPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailPipeline.h; sourceTree = "<group>"; };
 		E1C3D81A1DAF8B3A00044718 /* PhotoDetailPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailPipeline.m; sourceTree = "<group>"; };
+		E1D07B421DC21D4B00B8E840 /* MIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUtilities.h; sourceTree = "<group>"; };
+		E1D07B431DC21D4B00B8E840 /* MIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +376,8 @@
 			children = (
 				E1798D4B1DB237CC00254295 /* MIMediator.h */,
 				E1798D4C1DB237CC00254295 /* MIMediator.m */,
+				E1D07B421DC21D4B00B8E840 /* MIUtilities.h */,
+				E1D07B431DC21D4B00B8E840 /* MIUtilities.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				E1C3D8181DAF8B0500044718 /* PhotoDetailStore.m in Sources */,
 				E1798D5F1DB237CC00254295 /* EXTADT.m in Sources */,
 				E1798D631DB237CC00254295 /* EXTSafeCategory.m in Sources */,
+				E1D07B441DC21D4B00B8E840 /* MIUtilities.m in Sources */,
 				E119D5891DB076C600D2C551 /* GetPhotoContextService.m in Sources */,
 				E1798D671DB237CC00254295 /* NSMethodSignature+EXT.m in Sources */,
 				E1798D6D1DB237CC00254295 /* MIService.m in Sources */,

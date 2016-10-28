@@ -15,6 +15,7 @@
 @interface MIViewController ()
 
 @property (nonatomic, assign) Class viewClass;                  //!< Container view class
+@property (nonatomic, copy) MICallback callback;                //!< Callback for the previous ViewController
 
 @end
 
@@ -26,6 +27,11 @@
 
 - (instancetype)initWithStore:(id<MIStore>)store viewClass:(Class)viewClass {
     
+    return [self initWithStore:store viewClass:viewClass callback:nil];
+}
+
+- (instancetype)initWithStore:(id<MIStore>)store viewClass:(Class)viewClass callback:(MICallback)callback {
+    
     NSParameterAssert(store);
     NSAssert([viewClass isSubclassOfClass:[UIView class]], @"viewClass should be subclass of UIView");
     
@@ -35,6 +41,7 @@
         
         _store = store;
         _viewClass = viewClass;
+        _callback = [callback copy];
     }
     
     return self;

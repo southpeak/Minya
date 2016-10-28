@@ -33,7 +33,7 @@
     return [self viewControllerWithScene:scene context:context callback:nil];
 }
 
-- (UIViewController *)viewControllerWithScene:(MIScene *)scene context:(NSDictionary<NSString *,id> *)context callback:(MICallback __unused)callback {
+- (UIViewController *)viewControllerWithScene:(MIScene *)scene context:(NSDictionary<NSString *,id> *)context callback:(MICallback)callback {
     
     NSParameterAssert(scene);
     
@@ -53,7 +53,7 @@
     
     id<MIStore> store = [[storeClass alloc] initWithContext:context];
     
-    return [[controllerClass alloc] initWithStore:store viewClass:viewClass];
+    return [[controllerClass alloc] initWithStore:store viewClass:viewClass callback:callback];
 }
 
 @end

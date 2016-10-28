@@ -9,7 +9,7 @@
 #ifndef Minya_h
 #define Minya_h
 
-#define MINYA_VERSION   1.0.0
+#define MINYA_VERSION   1.0.1
 
 #import "MIStore.h"
 #import "MIStorage.h"
