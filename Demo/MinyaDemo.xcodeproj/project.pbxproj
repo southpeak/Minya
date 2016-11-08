@@ -58,6 +58,7 @@
 		E1C3D8181DAF8B0500044718 /* PhotoDetailStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D8171DAF8B0500044718 /* PhotoDetailStore.m */; };
 		E1C3D81B1DAF8B3A00044718 /* PhotoDetailPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = E1C3D81A1DAF8B3A00044718 /* PhotoDetailPipeline.m */; };
 		E1D07B441DC21D4B00B8E840 /* MIUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D07B431DC21D4B00B8E840 /* MIUtilities.m */; };
+		E1EC48AA1DC9B3A200F221CF /* NSObject+MINotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EC48A91DC9B3A200F221CF /* NSObject+MINotification.m */; };
 		E702B688D1DFD71E0680DE53 /* Pods_MinyaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE42304832BEE7C82AC7AF08 /* Pods_MinyaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -183,6 +184,8 @@
 		E1C3D81A1DAF8B3A00044718 /* PhotoDetailPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailPipeline.m; sourceTree = "<group>"; };
 		E1D07B421DC21D4B00B8E840 /* MIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUtilities.h; sourceTree = "<group>"; };
 		E1D07B431DC21D4B00B8E840 /* MIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUtilities.m; sourceTree = "<group>"; };
+		E1EC48A81DC9B3A200F221CF /* NSObject+MINotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MINotification.h"; sourceTree = "<group>"; };
+		E1EC48A91DC9B3A200F221CF /* NSObject+MINotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MINotification.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +323,8 @@
 				E1798D2B1DB237CC00254295 /* NSObject+MIKVO.m */,
 				E1798D2C1DB237CC00254295 /* NSObject+MISwizzle.h */,
 				E1798D2D1DB237CC00254295 /* NSObject+MISwizzle.m */,
+				E1EC48A81DC9B3A200F221CF /* NSObject+MINotification.h */,
+				E1EC48A91DC9B3A200F221CF /* NSObject+MINotification.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -519,6 +524,7 @@
 				TargetAttributes = {
 					E13555AD1D9A714C001F8FA8 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TV929D9GDN;
 						ProvisioningStyle = Automatic;
 					};
 					E1798D751DB2391B00254295 = {
@@ -639,6 +645,7 @@
 				E1798D641DB237CC00254295 /* EXTScope.m in Sources */,
 				E1C3D81B1DAF8B3A00044718 /* PhotoDetailPipeline.m in Sources */,
 				E119D5961DB0801700D2C551 /* InterestingnessPipeline.m in Sources */,
+				E1EC48AA1DC9B3A200F221CF /* NSObject+MINotification.m in Sources */,
 				E1798D661DB237CC00254295 /* NSInvocation+EXT.m in Sources */,
 				E13555B31D9A714C001F8FA8 /* main.m in Sources */,
 				E119D5861DB0646D00D2C551 /* Photo.m in Sources */,
@@ -795,7 +802,7 @@
 			baseConfigurationReference = B2CECFB3212332A6BD9C1987 /* Pods-MinyaDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TV929D9GDN;
 				INFOPLIST_FILE = MinyaDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -809,7 +816,7 @@
 			baseConfigurationReference = 24606CE93B31F7DB80D0E4EB /* Pods-MinyaDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TV929D9GDN;
 				INFOPLIST_FILE = MinyaDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

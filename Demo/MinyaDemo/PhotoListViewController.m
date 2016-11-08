@@ -42,6 +42,12 @@
     
     @weakify(self)
     
+    [self observeNotification:@"Test" sender:nil handler:^(NSNotification *notification) {
+        
+        @strongify(self)
+        NSLog(@"Pipeline = %@", self.pipeline);
+    }];
+    
     // When user select a cell in the tableview, it will push the next viewcontroller.
     // The view controller observe the action and then do the work.
     [MIObserve(self.pipeline, inputSelectedPhotoIndex) changed:^(id _Nonnull newValue) {

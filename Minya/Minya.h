@@ -23,6 +23,7 @@
 
 #import "NSObject+MIDealloc.h"
 #import "NSObject+MIKVO.h"
+#import "NSObject+MINotification.h"
 
 #import "EXTScope.h"
 

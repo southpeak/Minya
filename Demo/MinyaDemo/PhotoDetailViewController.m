@@ -22,6 +22,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.store fetchData];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Test" object:nil userInfo:nil];
 }
 
 @end
