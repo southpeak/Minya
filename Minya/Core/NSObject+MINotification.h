@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Callback for handling notification
 
  @param notification notification informations
  */
-typedef void (^MINotificationBlock)(NSNotification *notification);
+typedef void (^MINotificationBlock)(NSNotification * _Nonnull notification);
 
 #pragma mark - NSObject MINotification Category
 /**
@@ -31,13 +33,15 @@ typedef void (^MINotificationBlock)(NSNotification *notification);
  @param sender notification sender
  @param handler handler callback
  */
-- (void)observeNotification:(NSString *)notificationName sender:(id)sender handler:(MINotificationBlock)handler;
+- (void)observeNotification:(NSString * _Nonnull)notificationName sender:(id _Nullable)sender handler:(MINotificationBlock _Nonnull)handler;
 
 /**
  Remove notification which belong to current object for the special name.
 
  @param notificationName notification name
  */
-- (void)removeNotification:(NSString *)notificationName;
+- (void)removeNotification:(NSString * _Nonnull)notificationName;
 
 @end
+
+NS_ASSUME_NONNULL_END

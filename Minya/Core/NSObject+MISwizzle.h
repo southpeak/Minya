@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param originalSelector original selector
  *  @param targetSelector target selector
  */
-+ (void)swizzleOriginalSelector:(SEL)originalSelector targetSelector:(SEL)targetSelector;
++ (void)swizzleOriginalSelector:(SEL _Nonnull)originalSelector targetSelector:(SEL _Nonnull)targetSelector;
 
 @end
 
