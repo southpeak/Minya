@@ -79,7 +79,7 @@ typedef void (^MIRequestCancel)();
  *
  */
 @interface MIService : NSObject <MIService> {
-    NSString *_identifier;                  //!< request identifier, which can be used for cancel request
+    NSMutableArray *_identifiers;               //!< request identifiers, which can be used for cancel request
 }
 
 /**
